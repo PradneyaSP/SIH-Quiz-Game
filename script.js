@@ -43,7 +43,6 @@ $(".start button").click(function (e) {
 
 var i = -1;
 function writeQuestion() {
-    i++;
   $(".option").removeClass("correct");
   $(".option").removeClass("wrong");
   $(".qtext").text(mcqQuestions[i][0]);
@@ -61,6 +60,7 @@ $(".option").click(function (e) {
     $(this).addClass("wrong");
     $("#" + answers[i]).addClass("correct");
   }
+  i++;
 
   $(".next").click(function (e) {
     if (i < 4) {
